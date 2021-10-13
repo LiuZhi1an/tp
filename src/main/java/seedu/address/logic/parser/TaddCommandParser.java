@@ -25,7 +25,6 @@ public class TaddCommandParser implements Parser<TaddCommand> {
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(
                         args, PREFIX_NAME, PREFIX_MEMBER_ID);
-
         if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_MEMBER_ID)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, TaddCommand.MESSAGE_USAGE));
